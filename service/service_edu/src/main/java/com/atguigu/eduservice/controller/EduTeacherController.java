@@ -31,7 +31,8 @@ import java.util.Map;
  */
 @Api(description = "讲师管理")
 @RestController
-@RequestMapping("/eduservice/edu-teacher")
+@RequestMapping("/eduservice/teacher")
+@CrossOrigin//解决跨域问题
 public class EduTeacherController {
 
     //注入service
@@ -116,7 +117,7 @@ public class EduTeacherController {
             //构建条件
             wrapper.le("gmt_create",end);
         }
-
+        wrapper.orderByDesc("gmt_create");
         teacherService.page(pageTeacher,wrapper);
         long total=pageTeacher.getTotal();
         List<EduTeacher> records = pageTeacher.getRecords();//数据list集合
