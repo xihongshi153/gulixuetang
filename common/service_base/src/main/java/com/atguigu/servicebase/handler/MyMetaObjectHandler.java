@@ -9,7 +9,7 @@ import java.util.Date;
 @Component
 public class MyMetaObjectHandler implements MetaObjectHandler {
     @Override
-    public void insertFill(MetaObject metaObject) {
+    public void insertFill(MetaObject metaObject){
         //属性名称，不是字段名称 类里的名称
         this.setFieldValByName("gmtCreate", new Date(), metaObject);
         this.setFieldValByName("gmtModified", new Date(), metaObject);

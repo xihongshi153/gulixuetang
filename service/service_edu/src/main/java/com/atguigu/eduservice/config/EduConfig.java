@@ -26,9 +26,7 @@ public class EduConfig {
         return performanceInterceptor;
     }
     /**
-     2
      * 逻辑删除插件
-     3
      */
 
     @Bean

@@ -18,6 +18,7 @@ import java.util.List;
  */
 
 public interface EduSubjectService extends IService<EduSubject> {
+
      void saveSubject(MultipartFile file,EduSubjectService eduSubjectService);
 
 
